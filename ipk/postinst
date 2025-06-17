@@ -1,0 +1,6 @@
+#!/bin/sh
+mkdir -p /opt/var/spool/cron/crontabs
+if ! crontab -l >/dev/null 2>&1; then
+    echo "PATH=/opt/bin:/opt/sbin:/sbin:/usr/sbin:/bin:/usr/bin" | crontab -
+fi
+/opt/etc/init.d/S05crond start

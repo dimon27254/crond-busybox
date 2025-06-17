@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ENABLED=yes
+PROCS=crond
+ARGS="-L /dev/null"
+PREARGS=""
+DESC=$PROCS
+PATH=/opt/bin:/opt/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+
+. /opt/etc/init.d/rc.func
